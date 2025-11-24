@@ -1,0 +1,5 @@
+/Users/coeng24/Projects/Aria/CMakeFiles/Aria.dir
+/Users/coeng24/Projects/Aria/CMakeFiles/edit_cache.dir
+/Users/coeng24/Projects/Aria/CMakeFiles/rebuild_cache.dir
+/Users/coeng24/Projects/Aria/CMakeFiles/Aria_autogen_timestamp_deps.dir
+/Users/coeng24/Projects/Aria/CMakeFiles/Aria_autogen.dir

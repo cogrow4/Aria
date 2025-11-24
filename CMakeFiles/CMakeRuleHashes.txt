@@ -1,0 +1,4 @@
+# Hashes of file build rules.
+69ec1854d85d1720fb5e325a977c2bbf Aria_autogen/timestamp
+8c91cf0a23b0461a3d2994e4f231bed1 CMakeFiles/Aria_autogen
+04d06c7a4cb5fa71d43702e8f5c695ee qrc_resources.cpp
