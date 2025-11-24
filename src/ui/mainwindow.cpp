@@ -1,6 +1,6 @@
 #include "mainwindow.h"
-#include "ui/panels/brushpanel.h"
 #include "core/canvas.h"
+#include "ui/panels/brushpanel.h"
 #include "ui/panels/layerpanel.h"
 #include "utils/shortcuts/shortcutmanager.h"
 #include "widgets/hsvcolorpicker.h"

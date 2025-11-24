@@ -28,6 +28,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Aria.dir/src/ui/mainwindow.cpp.o.d"
   "CMakeFiles/Aria.dir/src/ui/mainwindow_fileops.cpp.o"
   "CMakeFiles/Aria.dir/src/ui/mainwindow_fileops.cpp.o.d"
+  "CMakeFiles/Aria.dir/src/ui/mainwindow_select.cpp.o"
+  "CMakeFiles/Aria.dir/src/ui/mainwindow_select.cpp.o.d"
   "CMakeFiles/Aria.dir/src/ui/panels/brushpanel.cpp.o"
   "CMakeFiles/Aria.dir/src/ui/panels/brushpanel.cpp.o.d"
   "CMakeFiles/Aria.dir/src/ui/panels/layerpanel.cpp.o"

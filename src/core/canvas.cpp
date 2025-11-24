@@ -3,6 +3,8 @@
 #include <QMouseEvent>
 #include <QPainter>
 #include <QResizeEvent>
+#include <QSet>
+#include <QStack>
 #include <QTabletEvent>
 
 Canvas::Canvas(QWidget *parent)
@@ -23,8 +25,13 @@ Canvas::Canvas(QWidget *parent)
 Canvas::~Canvas() {}
 
 void Canvas::newImage(int width, int height, const QColor &backgroundColor) {
-  m_layerManager = LayerManager(width, height);
   m_image = QImage(width, height, QImage::Format_ARGB32_Premultiplied);
+  m_image.fill(backgroundColor);
+
+  // Clear existing layers
+  while (m_layerManager.layerCount() > 0) {
+    m_layerManager.deleteLayer(0);
+  }
 
   // Add default background layer
   m_layerManager.addLayer("Background", width, height);
@@ -53,17 +60,46 @@ void Canvas::paintEvent(QPaintEvent *event) {
   // Draw the composited image
   painter.drawImage(xOffset, yOffset, composited);
 
-  // Draw selection preview if active
+  // Draw selection preview during drag
   if (m_selectionActive && !m_selectionRect.isNull()) {
-    painter.setPen(QPen(Qt::white, 1, Qt::DashLine));
-    painter.setBrush(Qt::NoBrush);
     QRect adjustedRect = m_selectionRect.translated(xOffset, yOffset);
-
+    // High-contrast dual outline (black then white)
+    painter.setPen(QPen(Qt::black, 2, Qt::SolidLine));
+    painter.setBrush(Qt::NoBrush);
     if (m_currentTool == RectSelectTool) {
       painter.drawRect(adjustedRect);
     } else if (m_currentTool == EllipseSelectTool) {
       painter.drawEllipse(adjustedRect);
     }
+    painter.setPen(QPen(Qt::white, 1, Qt::DashLine));
+    if (m_currentTool == RectSelectTool) {
+      painter.drawRect(adjustedRect);
+    } else if (m_currentTool == EllipseSelectTool) {
+      painter.drawEllipse(adjustedRect);
+    }
+  }
+
+  // Draw lasso path preview during drag
+  if (m_currentTool == LassoTool && m_selectionActive &&
+      m_lassoPath.size() > 1) {
+    QPolygon adjustedPath = m_lassoPath.translated(xOffset, yOffset);
+    painter.setPen(QPen(Qt::black, 2, Qt::SolidLine));
+    painter.drawPolyline(adjustedPath);
+    painter.setPen(QPen(Qt::white, 1, Qt::DashLine));
+    painter.drawPolyline(adjustedPath);
+  }
+
+  // Draw finalized selection with VERY visible outline
+  if (!m_selectionRegion.isEmpty() && !m_selectionActive) {
+    QRegion adjustedRegion = m_selectionRegion.translated(xOffset, yOffset);
+    QRect boundingRect = adjustedRegion.boundingRect();
+    // Draw thick black outline
+    painter.setPen(QPen(Qt::black, 3, Qt::SolidLine));
+    painter.setBrush(Qt::NoBrush);
+    painter.drawRect(boundingRect.adjusted(-1, -1, 1, 1));
+    // Draw white dashed line on top
+    painter.setPen(QPen(Qt::white, 2, Qt::DashLine));
+    painter.drawRect(boundingRect);
   }
 }
 
@@ -92,11 +128,27 @@ void Canvas::mousePressEvent(QMouseEvent *event) {
         emit colorPicked(pickedColor);
       }
       m_drawing = false;
+    } else if (m_currentTool == FillBucketTool) {
+      // Fill with current color
+      if (currentPoint.x() >= 0 && currentPoint.x() < m_image.width() &&
+          currentPoint.y() >= 0 && currentPoint.y() < m_image.height()) {
+        floodFill(currentPoint.toPoint(), m_brush.color());
+      }
+      m_drawing = false;
     } else if (m_currentTool == RectSelectTool ||
                m_currentTool == EllipseSelectTool) {
+      // Start new selection (clears old one)
       m_selectionRect = QRect(currentPoint.toPoint(), QSize(0, 0));
       m_selectionActive = true;
-      m_selectionRegion = QRegion();
+      m_selectionRegion = QRegion(); // Clear old selection
+      m_drawing = false;
+      update();
+    } else if (m_currentTool == LassoTool) {
+      // Start new lasso selection (clears old one)
+      m_lassoPath.clear();
+      m_lassoPath << currentPoint.toPoint();
+      m_selectionActive = true;
+      m_selectionRegion = QRegion(); // Clear old selection
       m_drawing = false;
       update();
     } else {
@@ -117,6 +169,13 @@ void Canvas::mouseMoveEvent(QMouseEvent *event) {
     m_selectionRect = QRectF(m_lastPoint, currentPoint).toRect();
     m_selectionActive = true;
     update();
+  } else if (m_currentTool == LassoTool && m_selectionActive) {
+    // Add point to lasso path
+    int xOffset = (width() - m_image.width()) / 2;
+    int yOffset = (height() - m_image.height()) / 2;
+    QPointF currentPoint = event->position() - QPointF(xOffset, yOffset);
+    m_lassoPath << currentPoint.toPoint();
+    update();
   } else if (m_drawing && (event->buttons() & Qt::LeftButton)) {
     int xOffset = (width() - m_image.width()) / 2;
     int yOffset = (height() - m_image.height()) / 2;
@@ -130,17 +189,24 @@ void Canvas::mouseMoveEvent(QMouseEvent *event) {
 void Canvas::mouseReleaseEvent(QMouseEvent *event) {
   if (event->button() == Qt::LeftButton) {
     if (m_currentTool == RectSelectTool || m_currentTool == EllipseSelectTool) {
-      // Finalize selection? Or just keep it active?
-      // Usually selection stays active until cleared.
-      // We need to store the selection region.
+      // Finalize selection
       if (m_currentTool == RectSelectTool) {
         m_selectionRegion = QRegion(m_selectionRect.normalized());
       } else {
         m_selectionRegion =
             QRegion(m_selectionRect.normalized(), QRegion::Ellipse);
       }
-      m_selectionActive =
-          false; // Selection is now finalized, not just active preview
+      // Keep selection active but not in preview mode
+      m_selectionActive = false;
+      m_selectionRect = QRect(); // Clear rect but keep region
+      update();
+    } else if (m_currentTool == LassoTool && m_selectionActive) {
+      // Finalize lasso selection
+      if (m_lassoPath.size() > 2) {
+        m_selectionRegion = QRegion(m_lassoPath);
+      }
+      m_selectionActive = false;
+      m_lassoPath.clear();
       update();
     } else if (m_drawing) {
       int xOffset = (width() - m_image.width()) / 2;
@@ -237,4 +303,79 @@ void Canvas::resizeImage(QImage *image, const QSize &newSize) {
   QPainter painter(&newImage);
   painter.drawImage(QPoint(0, 0), *image);
   *image = newImage;
+}
+// Flood fill implementation added at end of canvas.cpp
+
+void Canvas::floodFill(const QPoint &startPoint, const QColor &fillColor) {
+  if (!m_layerManager.currentLayer())
+    return;
+
+  QImage &layerImage = m_layerManager.currentLayer()->image();
+
+  // Check bounds
+  if (startPoint.x() < 0 || startPoint.x() >= layerImage.width() ||
+      startPoint.y() < 0 || startPoint.y() >= layerImage.height()) {
+    return;
+  }
+
+  QColor targetColor = layerImage.pixelColor(startPoint);
+
+  // Don't fill if same color
+  if (targetColor == fillColor) {
+    return;
+  }
+
+  int tolerance = m_brush.tolerance();
+
+  // Scanline flood fill algorithm
+  QStack<QPoint> stack;
+  stack.push(startPoint);
+
+  auto colorMatch = [&](const QColor &c1, const QColor &c2) -> bool {
+    if (tolerance == 0) {
+      return c1 == c2;
+    }
+    int dr = qAbs(c1.red() - c2.red());
+    int dg = qAbs(c1.green() - c2.green());
+    int db = qAbs(c1.blue() - c2.blue());
+    int da = qAbs(c1.alpha() - c2.alpha());
+    return (dr <= tolerance && dg <= tolerance && db <= tolerance &&
+            da <= tolerance);
+  };
+
+  QSet<QPoint> visited;
+
+  while (!stack.isEmpty()) {
+    QPoint p = stack.pop();
+
+    if (p.x() < 0 || p.x() >= layerImage.width() || p.y() < 0 ||
+        p.y() >= layerImage.height()) {
+      continue;
+    }
+
+    if (visited.contains(p)) {
+      continue;
+    }
+
+    // Check if within selection (if active)
+    if (!m_selectionRegion.isEmpty() && !m_selectionRegion.contains(p)) {
+      continue;
+    }
+
+    QColor currentColor = layerImage.pixelColor(p);
+    if (!colorMatch(currentColor, targetColor)) {
+      continue;
+    }
+
+    visited.insert(p);
+    layerImage.setPixelColor(p, fillColor);
+
+    // Add neighbors
+    stack.push(QPoint(p.x() + 1, p.y()));
+    stack.push(QPoint(p.x() - 1, p.y()));
+    stack.push(QPoint(p.x(), p.y() + 1));
+    stack.push(QPoint(p.x(), p.y() - 1));
+  }
+
+  update();
 }

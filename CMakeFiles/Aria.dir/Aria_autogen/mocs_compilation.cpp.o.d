@@ -1,7 +1,8 @@
 CMakeFiles/Aria.dir/Aria_autogen/mocs_compilation.cpp.o: \
   /Users/coeng24/Projects/Aria/Aria_autogen/mocs_compilation.cpp \
-  /Users/coeng24/Projects/Aria/Aria_autogen/PRMOGMWJPH/moc_brush.cpp \
-  /Users/coeng24/Projects/Aria/Aria_autogen/PRMOGMWJPH/../../src/core/brush.h \
+  /Users/coeng24/Projects/Aria/Aria_autogen/PRMOGMWJPH/moc_canvas.cpp \
+  /Users/coeng24/Projects/Aria/Aria_autogen/PRMOGMWJPH/../../src/core/canvas.h \
+  /Users/coeng24/Projects/Aria/src/core/brush.h \
   /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/QColor \
   /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qcolor.h \
   /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qtguiglobal.h \
@@ -896,15 +897,35 @@ CMakeFiles/Aria.dir/Aria_autogen/mocs_compilation.cpp.o: \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qalgorithms.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qstringmatcher.h \
   /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qrgba64.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QObject \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qobject.h \
+  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/QPainter \
+  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qpainter.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qrect.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qmargins.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q23utility.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q20utility.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qsize.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qpoint.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qscopedpointer.h \
+  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qpixmap.h \
+  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qpaintdevice.h \
+  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qwindowdefs.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qobjectdefs.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qobjectdefs_impl.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qfunctionaltools_impl.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qscopedpointer.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qmetatype.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qshareddata.h \
+  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qimage.h \
+  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qpixelformat.h \
+  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qtransform.h \
+  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qpolygon.h \
+  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qregion.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qdatastream.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qiodevicebase.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qspan.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/cassert \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q20iterator.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qline.h \
+  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qtextoption.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qmetatype.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qfloat16.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qmath.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtformat_impl.h \
@@ -916,33 +937,6 @@ CMakeFiles/Aria.dir/Aria_autogen/mocs_compilation.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/list \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/map \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__tree \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qobject_impl.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qbindingstorage.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/chrono \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__chrono/file_clock.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/forward_list \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/QPainter \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qpainter.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qrect.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qmargins.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q23utility.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q20utility.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qsize.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qpoint.h \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qpixmap.h \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qpaintdevice.h \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qwindowdefs.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qshareddata.h \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qimage.h \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qpixelformat.h \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qtransform.h \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qpolygon.h \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qregion.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qspan.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/cassert \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q20iterator.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qline.h \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qtextoption.h \
   /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qpen.h \
   /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qbrush.h \
   /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qfontinfo.h \
@@ -951,16 +945,16 @@ CMakeFiles/Aria.dir/Aria_autogen/mocs_compilation.cpp.o: \
   /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qfontvariableaxis.h \
   /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qfontmetrics.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QPointF \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtmochelpers.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtmocconstants.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q20algorithm.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q23type_traits.h \
-  /Users/coeng24/Projects/Aria/Aria_autogen/PRMOGMWJPH/moc_canvas.cpp \
-  /Users/coeng24/Projects/Aria/Aria_autogen/PRMOGMWJPH/../../src/core/canvas.h \
-  /Users/coeng24/Projects/Aria/src/core/brush.h \
   /Users/coeng24/Projects/Aria/src/core/layermanager.h \
   /Users/coeng24/Projects/Aria/src/core/layer.h \
   /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/QImage \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QObject \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qobject.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qobject_impl.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qbindingstorage.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/chrono \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__chrono/file_clock.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/forward_list \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QString \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QUuid \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/quuid.h \
@@ -990,6 +984,10 @@ CMakeFiles/Aria.dir/Aria_autogen/mocs_compilation.cpp.o: \
   /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qsizepolicy.h \
   /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qcursor.h \
   /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qbitmap.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtmochelpers.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtmocconstants.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q20algorithm.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q23type_traits.h \
   /Users/coeng24/Projects/Aria/Aria_autogen/PRMOGMWJPH/moc_layermanager.cpp \
   /Users/coeng24/Projects/Aria/Aria_autogen/PRMOGMWJPH/../../src/core/layermanager.h \
   /Users/coeng24/Projects/Aria/Aria_autogen/IYECXEJARV/moc_welcomedialog.cpp \

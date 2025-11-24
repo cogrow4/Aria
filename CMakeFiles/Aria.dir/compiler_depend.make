@@ -751,6 +751,7 @@ Aria_autogen/timestamp: /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/
   src/ui/mainwindow.cpp \
   src/ui/mainwindow.h \
   src/ui/mainwindow_fileops.cpp \
+  src/ui/mainwindow_select.cpp \
   src/ui/panels/brushpanel.cpp \
   src/ui/panels/brushpanel.h \
   src/ui/panels/layerpanel.cpp \
@@ -2077,10 +2078,8 @@ CMakeFiles/Aria.dir/Aria_autogen/mocs_compilation.cpp.o: Aria_autogen/mocs_compi
   Aria_autogen/IYECXEJARV/moc_welcomedialog.cpp \
   src/utils/shortcuts/shortcutmanager.h \
   Aria_autogen/OCEW5ANPER/moc_shortcutmanager.cpp \
-  src/core/brush.h \
   src/core/canvas.h \
   src/core/layermanager.h \
-  Aria_autogen/PRMOGMWJPH/moc_brush.cpp \
   Aria_autogen/PRMOGMWJPH/moc_canvas.cpp \
   Aria_autogen/PRMOGMWJPH/moc_layermanager.cpp \
   src/widgets/ariacolorpicker.h \
@@ -2468,6 +2467,7 @@ CMakeFiles/Aria.dir/src/core/brush.cpp.o: src/core/brush.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/types.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/wait.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/time.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/unistd.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/wchar.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/xlocale.h \
@@ -2620,6 +2620,7 @@ CMakeFiles/Aria.dir/src/core/brush.cpp.o: src/core/brush.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__charconv/traits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__chrono/convert_to_timespec.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__chrono/duration.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__chrono/file_clock.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__chrono/high_resolution_clock.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__chrono/steady_clock.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__chrono/system_clock.h \
@@ -2672,6 +2673,22 @@ CMakeFiles/Aria.dir/src/core/brush.cpp.o: src/core/brush.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__exception/nested_exception.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__exception/operations.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__exception/terminate.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__filesystem/copy_options.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__filesystem/directory_entry.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__filesystem/directory_iterator.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__filesystem/directory_options.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__filesystem/file_status.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__filesystem/file_time_type.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__filesystem/file_type.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__filesystem/filesystem_error.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__filesystem/operations.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__filesystem/path.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__filesystem/path_iterator.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__filesystem/perm_options.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__filesystem/perms.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__filesystem/recursive_directory_iterator.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__filesystem/space_info.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__filesystem/u8path.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__format/buffer.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__format/concepts.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__format/enable_insertable.h \
@@ -2717,6 +2734,7 @@ CMakeFiles/Aria.dir/src/core/brush.cpp.o: src/core/brush.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__fwd/bit_reference.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__fwd/byte.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__fwd/complex.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__fwd/deque.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__fwd/format.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__fwd/fstream.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__fwd/functional.h \
@@ -2726,7 +2744,9 @@ CMakeFiles/Aria.dir/src/core/brush.cpp.o: src/core/brush.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__fwd/memory_resource.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__fwd/ostream.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__fwd/pair.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__fwd/queue.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__fwd/sstream.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__fwd/stack.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__fwd/streambuf.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__fwd/string.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__fwd/string_view.h \
@@ -2823,7 +2843,11 @@ CMakeFiles/Aria.dir/src/core/brush.cpp.o: src/core/brush.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__memory/uses_allocator.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__memory/voidify.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__memory_resource/memory_resource.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__memory_resource/monotonic_buffer_resource.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__memory_resource/polymorphic_allocator.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__memory_resource/pool_options.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__memory_resource/synchronized_pool_resource.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__memory_resource/unsynchronized_pool_resource.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__mutex/lock_guard.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__mutex/mutex.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__mutex/once_flag.h \
@@ -2843,9 +2867,44 @@ CMakeFiles/Aria.dir/src/core/brush.cpp.o: src/core/brush.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__numeric/transform_exclusive_scan.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__numeric/transform_inclusive_scan.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__numeric/transform_reduce.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__ostream/basic_ostream.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/bernoulli_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/binomial_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/cauchy_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/chi_squared_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/clamp_to_integral.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/default_random_engine.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/discard_block_engine.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/discrete_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/exponential_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/extreme_value_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/fisher_f_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/gamma_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/generate_canonical.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/geometric_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/independent_bits_engine.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/is_seed_sequence.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/is_valid.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/knuth_b.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/linear_congruential_engine.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/log2.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/lognormal_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/mersenne_twister_engine.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/negative_binomial_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/normal_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/piecewise_constant_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/piecewise_linear_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/poisson_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/random_device.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/ranlux.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/seed_seq.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/shuffle_order_engine.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/student_t_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/subtract_with_carry_engine.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/uniform_int_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/uniform_random_bit_generator.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/uniform_real_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/weibull_distribution.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__ranges/access.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__ranges/concepts.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__ranges/container_compatible_range.h \
@@ -2861,6 +2920,12 @@ CMakeFiles/Aria.dir/src/core/brush.cpp.o: src/core/brush.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__ranges/view_interface.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__split_buffer \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__std_mbstate_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__stop_token/atomic_unique_lock.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__stop_token/intrusive_list_view.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__stop_token/intrusive_shared_ptr.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__stop_token/stop_source.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__stop_token/stop_state.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__stop_token/stop_token.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__string/char_traits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__string/constexpr_c_functions.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__string/extern_template_lists.h \
@@ -2869,10 +2934,14 @@ CMakeFiles/Aria.dir/src/core/brush.cpp.o: src/core/brush.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__system_error/error_code.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__system_error/error_condition.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__system_error/system_error.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__thread/formatter.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__thread/id.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__thread/jthread.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__thread/poll_with_backoff.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__thread/support.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__thread/support/pthread.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__thread/this_thread.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__thread/thread.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__tree \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__tuple/find_index.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__tuple/ignore.h \
@@ -2921,6 +2990,7 @@ CMakeFiles/Aria.dir/src/core/brush.cpp.o: src/core/brush.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_base_of.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_bounded_array.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_callable.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_char_like_type.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_class.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_compound.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_const.h \
@@ -3028,9 +3098,11 @@ CMakeFiles/Aria.dir/src/core/brush.cpp.o: src/core/brush.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/array \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/atomic \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/bit \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/bitset \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/cassert \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/cctype \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/cerrno \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/chrono \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/climits \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/clocale \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/cmath \
@@ -3046,13 +3118,20 @@ CMakeFiles/Aria.dir/src/core/brush.cpp.o: src/core/brush.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/ctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/cwchar \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/cwctype \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/deque \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/errno.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/exception \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/execution \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/filesystem \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/format \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/forward_list \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/functional \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/future \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/initializer_list \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/iomanip \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/ios \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/iosfwd \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/istream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/iterator \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/limits \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/list \
@@ -3061,11 +3140,20 @@ CMakeFiles/Aria.dir/src/core/brush.cpp.o: src/core/brush.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/map \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/math.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/memory \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/memory_resource \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/mutex \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/new \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/numeric \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/optional \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/ostream \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/print \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/queue \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/random \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/ratio \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/set \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/source_location \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/sstream \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/stack \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/stdbool.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/stddef.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/stdexcept \
@@ -3077,10 +3165,12 @@ CMakeFiles/Aria.dir/src/core/brush.cpp.o: src/core/brush.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/string.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/string_view \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/system_error \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/thread \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/tuple \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/type_traits \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/typeinfo \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/unordered_map \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/unordered_set \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/utility \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/variant \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/vector \
@@ -3102,86 +3192,225 @@ CMakeFiles/Aria.dir/src/core/brush.cpp.o: src/core/brush.cpp \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_rsize_t.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_size_t.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_wchar_t.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_bf16.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_neon.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_vector_types.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/limits.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/ptrcheck.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/sanitizer/tsan_interface.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdarg.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdbool.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdint.h \
   src/core/brush.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QDeadlineTimer \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QHash \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QList \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QMap \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QMutex \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QObject \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QPointF \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QString \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QStringList \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QVariant \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QtCore \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QtCoreDepends \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q17memory.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q20algorithm.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q20chrono.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q20functional.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q20iterator.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q20map.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q20memory.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q20type_traits.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q20utility.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q20vector.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q23functional.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q23utility.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q26numeric.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qabstractanimation.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qabstracteventdispatcher.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qabstractitemmodel.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qabstractnativeeventfilter.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qabstractproxymodel.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qalgorithms.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qanimationgroup.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qanystringview.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qapplicationstatic.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qarraydata.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qarraydataops.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qarraydatapointer.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qassert.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qassociativeiterable.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qatomic.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qatomic_cxx11.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qatomicscopedvaluerollback.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qbasicatomic.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qbasictimer.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qbindingstorage.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qbitarray.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qbuffer.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qbytearray.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qbytearrayalgorithms.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qbytearraylist.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qbytearraymatcher.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qbytearrayview.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcache.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcalendar.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcborarray.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcborcommon.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcbormap.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcborstream.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcborstreamreader.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcborstreamwriter.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcborvalue.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qchar.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qchronotimer.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcollator.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcommandlineoption.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcommandlineparser.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcompare.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcompare_impl.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcomparehelpers.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcompilerdetection.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qconcatenatetablesproxymodel.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qconfig.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qconstructormacros.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcontainerfwd.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcontainerinfo.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcontainertools_impl.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcontiguouscache.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcoreapplication.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcoreapplication_platform.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcoreevent.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcryptographichash.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qdarwinhelpers.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qdatastream.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qdatetime.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qdeadlinetimer.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qdebug.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qdir.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qdiriterator.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qdirlisting.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qeasingcurve.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qelapsedtimer.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qendian.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qeventloop.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qexception.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qexceptionhandling.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qfactoryinterface.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qfile.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qfiledevice.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qfileinfo.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qfileselector.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qfilesystemwatcher.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qflags.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qfloat16.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qforeach.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qfunctionaltools_impl.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qfunctionpointer.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qfuture.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qfuture_impl.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qfutureinterface.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qfuturesynchronizer.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qfuturewatcher.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qgenericatomic.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qglobal.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qglobalstatic.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qhash.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qhashfunctions.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qidentityproxymodel.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qiodevice.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qiodevicebase.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qitemselectionmodel.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qiterable.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qiterator.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qjsonarray.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qjsondocument.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qjsonobject.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qjsonparseerror.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qjsonvalue.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qlatin1stringmatcher.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qlatin1stringview.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qlibrary.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qlibraryinfo.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qline.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qlist.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qlocale.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qlockfile.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qlogging.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qloggingcategory.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qmalloc.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qmap.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qmargins.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qmath.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qmessageauthenticationcode.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qmetacontainer.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qmetaobject.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qmetatype.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qmimedata.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qmimedatabase.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qmimetype.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qminmax.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qmutex.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qnamespace.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qnativeinterface.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qnumeric.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qobject.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qobject_impl.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qobjectcleanuphandler.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qobjectdefs.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qobjectdefs_impl.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qoperatingsystemversion.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qoverload.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qpair.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qparallelanimationgroup.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qpauseanimation.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qpermissions.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qplugin.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qpluginloader.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qpoint.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qpointer.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qprocess.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qprocessordetection.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qpromise.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qproperty.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qpropertyanimation.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qpropertyprivate.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qqueue.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qrandom.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qreadwritelock.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qrect.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qrefcount.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qregularexpression.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qresource.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qresultstore.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qrunnable.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qsavefile.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qscopedpointer.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qscopedvaluerollback.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qscopeguard.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qsemaphore.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qsequentialanimationgroup.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qsequentialiterable.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qset.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qsettings.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qshareddata.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qshareddata_impl.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qsharedmemory.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qsharedpointer.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qsharedpointer_impl.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qsignalmapper.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qsimd.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qsize.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qsocketnotifier.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qsortfilterproxymodel.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qspan.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qstack.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qstandardpaths.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qstaticlatin1stringmatcher.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qstdlibdetection.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qstorageinfo.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qstring.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qstringalgorithms.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qstringbuilder.h \
@@ -3189,6 +3418,7 @@ CMakeFiles/Aria.dir/src/core/brush.cpp.o: src/core/brush.cpp \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qstringconverter_base.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qstringfwd.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qstringlist.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qstringlistmodel.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qstringliteral.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qstringmatcher.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qstringtokenizer.h \
@@ -3196,6 +3426,7 @@ CMakeFiles/Aria.dir/src/core/brush.cpp.o: src/core/brush.cpp \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qswap.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qsysinfo.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qsystemdetection.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qsystemsemaphore.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtaggedpointer.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtclasshelpermacros.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtconfiginclude.h \
@@ -3203,22 +3434,55 @@ CMakeFiles/Aria.dir/src/core/brush.cpp.o: src/core/brush.cpp \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtcore-config.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtcoreexports.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtcoreglobal.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtcoreversion.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtdeprecationdefinitions.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtdeprecationmarkers.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtemporarydir.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtemporaryfile.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtenvironmentvariables.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtextboundaryfinder.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtextstream.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtformat_impl.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qthread.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qthreadpool.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qthreadstorage.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtimeline.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtimer.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtimezone.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtipccommon.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtmetamacros.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtmocconstants.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtnoop.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtpreprocessorsupport.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtranslator.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtransposeproxymodel.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtresource.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtsan_impl.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtsymbolmacros.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qttranslation.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qttypetraits.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtversion.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtversionchecks.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtypeinfo.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtyperevision.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtypes.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qurl.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qurlquery.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qutf8stringview.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/quuid.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qvariant.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qvariantanimation.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qvarianthash.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qvariantlist.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qvariantmap.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qvarlengtharray.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qvector.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qversionnumber.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qversiontagging.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qwaitcondition.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qwineventnotifier.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qxmlstream.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qxpfunctional.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qxptype_traits.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qyieldcpu.h \
   /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/QColor \
@@ -4066,8 +4330,10 @@ CMakeFiles/Aria.dir/src/core/canvas.cpp.o: src/core/canvas.cpp \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QObject \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QPointF \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QRect \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QSet \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QSize \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QSizeF \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QStack \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QString \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QUuid \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q17memory.h \
@@ -4163,6 +4429,7 @@ CMakeFiles/Aria.dir/src/core/canvas.cpp.o: src/core/canvas.cpp \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qsharedpointer_impl.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qsize.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qspan.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qstack.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qstdlibdetection.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qstring.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qstringalgorithms.h \
@@ -11435,6 +11702,8 @@ CMakeFiles/Aria.dir/src/ui/mainwindow_fileops.cpp.o: src/ui/mainwindow_fileops.c
   /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qtwidgetsglobal.h \
   /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qwidget.h
 
+CMakeFiles/Aria.dir/src/ui/mainwindow_select.cpp.o: src/ui/mainwindow_select.cpp
+
 CMakeFiles/Aria.dir/src/ui/panels/brushpanel.cpp.o: src/ui/panels/brushpanel.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h \
@@ -16476,22 +16745,6 @@ CMakeFiles/Aria.dir/src/widgets/hsvcolorpicker.cpp.o: src/widgets/hsvcolorpicker
 
 /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/QActionGroup:
 
-/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtimezone.h:
-
-/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qjsondocument.h:
-
-/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qfileinfo.h:
-
-/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qfactoryinterface.h:
-
-/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qdirlisting.h:
-
-/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qdir.h:
-
-/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcborcommon.h:
-
-/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcalendar.h:
-
 /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qgridlayout.h:
 
 /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qboxlayout.h:
@@ -16516,17 +16769,227 @@ CMakeFiles/Aria.dir/src/widgets/hsvcolorpicker.cpp.o: src/widgets/hsvcolorpicker
 
 /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/QApplication:
 
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QTextStream:
+
+/opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qvectornd.h:
+
+/opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qvector2d.h:
+
+/opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qscreen_platform.h:
+
+/opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qscreen.h:
+
+/opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qevent.h:
+
+/opt/homebrew/opt/qt/lib/QtGui.framework/Headers/QTransform:
+
+/opt/homebrew/opt/qt/lib/QtGui.framework/Headers/QResizeEvent:
+
+/opt/homebrew/opt/qt/lib/QtGui.framework/Headers/QMouseEvent:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QSizeF:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QSize:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QSet:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qxpfunctional.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qxmlstream.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qwaitcondition.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qversionnumber.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qvariantmap.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qvarianthash.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qvariantanimation.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qurlquery.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qurl.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtyperevision.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtsymbolmacros.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtransposeproxymodel.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtranslator.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtimezone.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtimeline.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qthreadstorage.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtemporarydir.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qsystemsemaphore.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qstringlistmodel.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qstack.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qsimd.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qsharedmemory.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qsequentialiterable.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qscopedvaluerollback.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qsavefile.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qrunnable.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qrandom.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qpropertyanimation.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qpromise.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qprocess.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qpluginloader.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qparallelanimationgroup.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qnativeinterface.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qmutex.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qmimedatabase.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qloggingcategory.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qlatin1stringmatcher.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qlockfile.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qjsondocument.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qjsonarray.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qiodevice.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qfuturesynchronizer.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qfutureinterface.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qfilesystemwatcher.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qfileselector.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qfileinfo.h:
+
 /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qfiledevice.h:
 
 /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qfile.h:
 
-/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QTextStream:
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qfactoryinterface.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qexception.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qeventloop.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qelapsedtimer.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qeasingcurve.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qdirlisting.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qdiriterator.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qdir.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcryptographichash.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcoreapplication_platform.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcoreapplication.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qconcatenatetablesproxymodel.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcollator.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcborstreamwriter.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcborstreamreader.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcborstream.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcbormap.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcborcommon.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcborarray.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcalendar.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qbytearraymatcher.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qbuffer.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qbasictimer.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qatomicscopedvaluerollback.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qapplicationstatic.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qanimationgroup.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qabstractnativeeventfilter.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qabstracteventdispatcher.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qabstractanimation.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q26numeric.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q23functional.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q20vector.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q20map.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q20chrono.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QtCoreDepends:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QtCore:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QVariant:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QMutex:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QMap:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QList:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QDeadlineTimer:
+
+/Library/Developer/CommandLineTools/usr/lib/clang/17/include/sanitizer/tsan_interface.h:
+
+/Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_vector_types.h:
+
+/Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_bf16.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/thread:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/stack:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/random:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/queue:
 
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qassociativeiterable.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/print:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/future:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/filesystem:
 
@@ -16535,6 +16998,58 @@ CMakeFiles/Aria.dir/src/widgets/hsvcolorpicker.cpp.o: src/widgets/hsvcolorpicker
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/bitset:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_char_like_type.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__stop_token/stop_token.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__stop_token/stop_source.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/weibull_distribution.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/uniform_random_bit_generator.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/subtract_with_carry_engine.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/student_t_distribution.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/shuffle_order_engine.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/ranlux.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/poisson_distribution.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qmimedata.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/piecewise_constant_distribution.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/normal_distribution.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/negative_binomial_distribution.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/mersenne_twister_engine.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/lognormal_distribution.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/knuth_b.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/independent_bits_engine.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/geometric_distribution.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/extreme_value_distribution.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/default_random_engine.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/chi_squared_distribution.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/binomial_distribution.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/bernoulli_distribution.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__memory_resource/unsynchronized_pool_resource.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__memory_resource/synchronized_pool_resource.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__memory_resource/pool_options.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__fwd/stack.h:
 
@@ -16554,6 +17069,8 @@ CMakeFiles/Aria.dir/src/widgets/hsvcolorpicker.cpp.o: src/widgets/hsvcolorpicker
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__filesystem/filesystem_error.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/random_device.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__filesystem/file_time_type.h:
 
 /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qgroupbox.h:
@@ -16565,46 +17082,6 @@ CMakeFiles/Aria.dir/src/widgets/hsvcolorpicker.cpp.o: src/widgets/hsvcolorpicker
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__filesystem/directory_iterator.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__filesystem/directory_entry.h:
-
-/opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qvectornd.h:
-
-/opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qvector2d.h:
-
-/opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qscreen_platform.h:
-
-/opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qscreen.h:
-
-/opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qevent.h:
-
-/opt/homebrew/opt/qt/lib/QtGui.framework/Headers/QTransform:
-
-/opt/homebrew/opt/qt/lib/QtGui.framework/Headers/QResizeEvent:
-
-/opt/homebrew/opt/qt/lib/QtGui.framework/Headers/QMouseEvent:
-
-/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qurl.h:
-
-/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qnativeinterface.h:
-
-/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qiodevice.h:
-
-/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qeventloop.h:
-
-/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qelapsedtimer.h:
-
-/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcoreapplication_platform.h:
-
-/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcoreapplication.h:
-
-/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qbasictimer.h:
-
-/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qabstracteventdispatcher.h:
-
-/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QSizeF:
-
-/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QSize:
-
-/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QList:
 
 qrc_resources.cpp:
 
@@ -16638,6 +17115,8 @@ qrc_resources.cpp:
 
 /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/QDialog:
 
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QStringList:
+
 /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qwindowdefs.h:
 
 /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qvalidator.h:
@@ -16656,6 +17135,8 @@ qrc_resources.cpp:
 
 /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qpixelformat.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__thread/thread.h:
+
 /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qkeysequence.h:
 
 /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qfontvariableaxis.h:
@@ -16663,6 +17144,8 @@ qrc_resources.cpp:
 /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qfontmetrics.h:
 
 /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qfont.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qqueue.h:
 
 /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qcolor.h:
 
@@ -16689,6 +17172,10 @@ qrc_resources.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h:
 
 /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qutf8stringview.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qpauseanimation.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qabstractproxymodel.h:
 
 /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtypeinfo.h:
 
@@ -16727,6 +17214,8 @@ qrc_resources.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX26.0.sdk/usr/include/libkern/arm/_OSByteOrder.h:
 
 /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qswap.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qfuture_impl.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/adjacent_find.h:
 
@@ -16787,6 +17276,8 @@ qrc_resources.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__filesystem/file_type.h:
 
 /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qmetatype.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtemporaryfile.h:
 
 /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qmetacontainer.h:
 
@@ -16874,19 +17365,17 @@ qrc_resources.cpp:
 
 /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qabstractitemmodel.h:
 
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qstorageinfo.h:
+
 /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q23utility.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qvector.h:
 
 /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qdatastream.h:
 
 /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q23type_traits.h:
 
 Aria_autogen/PRMOGMWJPH/moc_canvas.cpp:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__fwd/string_view.h:
-
-Aria_autogen/PRMOGMWJPH/moc_brush.cpp:
 
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtCore.framework/Versions/A/Headers/qstringview.h:
 
@@ -16998,6 +17487,8 @@ src/ui/panels/brushpanel.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_intptr_t.h:
 
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qvariantlist.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/log2.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int32_t.h:
@@ -17069,6 +17560,8 @@ src/ui/panels/brushpanel.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_condattr_t.h:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdint.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/uniform_real_distribution.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/string.h:
 
@@ -17174,6 +17667,8 @@ src/ui/panels/brushpanel.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_intmax_t.h:
 
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qsequentialanimationgroup.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_time.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_strings.h:
@@ -17205,6 +17700,8 @@ src/ui/panels/brushpanel.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h:
 
 /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtmochelpers.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qchronotimer.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX26.0.sdk/usr/include/sys/_types/_dev_t.h:
 
@@ -17316,6 +17813,8 @@ Aria_autogen/mocs_compilation.cpp:
 
 /opt/homebrew/opt/qt/lib/cmake/Qt6Gui/Qt6QWebpPluginTargets-release.cmake:
 
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qresultstore.h:
+
 /opt/homebrew/opt/qt/lib/cmake/Qt6Gui/Qt6QWebpPluginAdditionalTargetInfo.cmake:
 
 /opt/homebrew/opt/qt/lib/cmake/Qt6Core/Qt6QDarwinCameraPermissionPluginAdditionalTargetInfo.cmake:
@@ -17376,6 +17875,8 @@ Aria_autogen/mocs_compilation.cpp:
 
 /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QRect:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/piecewise_linear_distribution.h:
+
 /opt/homebrew/opt/qt/lib/cmake/Qt6Gui/Qt6QJpegPluginTargets.cmake:
 
 /opt/homebrew/opt/qt/lib/cmake/Qt6Gui/Qt6QJpegPluginConfig.cmake:
@@ -17422,6 +17923,8 @@ Aria_autogen/mocs_compilation.cpp:
 
 /opt/homebrew/opt/qt/lib/cmake/Qt6Gui/Qt6QTiffPluginTargets.cmake:
 
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qthread.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/istream:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__functional/hash.h:
@@ -17458,6 +17961,8 @@ Aria_autogen/mocs_compilation.cpp:
 
 /opt/homebrew/opt/qt/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfig.cmake:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/gamma_distribution.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__concepts/convertible_to.h:
 
 /opt/homebrew/opt/qt/lib/cmake/Qt6DBusPrivate/Qt6DBusPrivateVersionlessAliasTargets.cmake:
@@ -17487,6 +17992,8 @@ Aria_autogen/mocs_compilation.cpp:
 /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/QGroupBox:
 
 /opt/homebrew/opt/qt/lib/cmake/Qt6CorePrivate/Qt6CorePrivateVersionlessAliasTargets.cmake:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/is_seed_sequence.h:
 
 /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qabstractspinbox.h:
 
@@ -17558,11 +18065,15 @@ Aria_autogen/mocs_compilation.cpp:
 
 /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/QColorDialog:
 
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qsortfilterproxymodel.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__memory/allocator.h:
 
 /opt/homebrew/opt/qt/lib/cmake/Qt6Core/Qt6CoreVersionlessAliasTargets.cmake:
 
 /opt/homebrew/opt/qt/lib/cmake/Qt6Core/Qt6CoreTargets-release.cmake:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/exponential_distribution.h:
 
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtCore.framework/Versions/A/Headers/qtmetamacros.h:
 
@@ -17678,6 +18189,8 @@ src/widgets/hsvcolorpicker.h:
 
 /opt/homebrew/lib/cmake/Qt6/QtFeature.cmake:
 
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qsignalmapper.h:
+
 /opt/homebrew/lib/cmake/Qt6/FindWrapOpenGL.cmake:
 
 /opt/homebrew/lib/cmake/Qt6/FindWrapAtomic.cmake:
@@ -17728,6 +18241,10 @@ src/widgets/hsvcolorpicker.h:
 
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtGui.framework/Versions/A/Headers/qtransform.h:
 
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qsemaphore.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qobjectcleanuphandler.h:
+
 /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qslider.h:
 
 /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qrefcount.h:
@@ -17753,6 +18270,8 @@ src/widgets/hsvcolorpicker.h:
 /opt/homebrew/opt/qt/lib/cmake/Qt6/Qt6Config.cmake:
 
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtGui.framework/Versions/A/Headers/qstandarditemmodel.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/memory_resource:
 
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtGui.framework/Versions/A/Headers/qrgba64.h:
 
@@ -17783,6 +18302,8 @@ Aria_autogen/IYECXEJARV/moc_welcomedialog.cpp:
 src/ui/dialogs/welcomedialog.h:
 
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtGui.framework/Versions/A/Headers/qicon.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qthreadpool.h:
 
 /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qchar.h:
 
@@ -17828,6 +18349,8 @@ src/ui/dialogs/welcomedialog.h:
 
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtGui.framework/Versions/A/Headers/QColor:
 
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtipccommon.h:
+
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtGui.framework/Versions/A/Headers/QAction:
 
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtCore.framework/Versions/A/Headers/qxptype_traits.h:
@@ -17857,6 +18380,8 @@ src/ui/dialogs/welcomedialog.h:
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtCore.framework/Versions/A/Headers/qtextstream.h:
 
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtCore.framework/Versions/A/Headers/qtenvironmentvariables.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qoperatingsystemversion.h:
 
 /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qjsonobject.h:
 
@@ -17920,7 +18445,11 @@ Aria_autogen/OCEW5ANPER/moc_shortcutmanager.cpp:
 
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtCore.framework/Versions/A/Headers/qscopedpointer.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/linear_congruential_engine.h:
+
 /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qbasicatomic.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtcoreversion.h:
 
 CMakeFiles/4.2.0/CMakeSystem.cmake:
 
@@ -17943,6 +18472,8 @@ CMakeFiles/4.2.0/CMakeSystem.cmake:
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtCore.framework/Versions/A/Headers/qpoint.h:
 
 /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qguiapplication_platform.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qproperty.h:
 
 /opt/homebrew/opt/qt/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersion.cmake:
 
@@ -17968,7 +18499,11 @@ CMakeFiles/4.2.0/CMakeSystem.cmake:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_size_t.h:
 
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtimer.h:
+
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtCore.framework/Versions/A/Headers/qnamespace.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qfuturewatcher.h:
 
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtCore.framework/Versions/A/Headers/QUuid:
 
@@ -18026,18 +18561,6 @@ src/ui/panels/layerpanel.h:
 
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtCore.framework/Versions/A/Headers/qttranslation.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__format/formatter_output.h:
-
-/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:
-
-/opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtCore.framework/Versions/A/Headers/qfunctionpointer.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__iterator/empty.h:
-
-/opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qcolordialog.h:
-
-/opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtCore.framework/Versions/A/Headers/qcontainerfwd.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__mutex/tag_types.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_rsize_t.h:
@@ -18094,6 +18617,8 @@ src/widgets/hsvcolorpicker.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__memory/unique_ptr.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/source_location:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/map:
 
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtCore.framework/Versions/A/Headers/QObject:
@@ -18106,9 +18631,13 @@ src/widgets/hsvcolorpicker.cpp:
 
 /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qhash.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/fisher_f_distribution.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__format/enable_insertable.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__thread/id.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/discrete_distribution.h:
 
 src/core/canvas.h:
 
@@ -18125,6 +18654,10 @@ src/widgets/ariacolorpicker.h:
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__math/fma.h:
 
 src/widgets/ariacolorpicker.cpp:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__thread/jthread.h:
+
+src/ui/mainwindow_select.cpp:
 
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtCore.framework/Versions/A/Headers/qstringfwd.h:
 
@@ -18202,6 +18735,8 @@ src/core/brush.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/resource.h:
 
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qbitarray.h:
+
 /opt/homebrew/opt/qt/lib/cmake/Qt6Gui/Qt6QWebpPluginConfig.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/comp_ref_type.h:
@@ -18231,6 +18766,8 @@ src/core/brush.cpp:
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtCore.framework/Versions/A/Headers/qbytearrayalgorithms.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/all_of.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__thread/formatter.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX26.0.sdk/usr/include/sys/_types/_u_int64_t.h:
 
@@ -18271,6 +18808,8 @@ Aria_autogen/RZ4CM6YYJ6/moc_ariacolorpicker.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/iosfwd:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX26.0.sdk/usr/include/sys/_types/_key_t.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/generate_canonical.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX26.0.sdk/usr/include/sys/_types/_intptr_t.h:
 
@@ -18336,6 +18875,8 @@ Aria_autogen/moc_predefs.h:
 
 src/ui/panels/layerpanel.cpp:
 
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qpropertyprivate.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__charconv/traits.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__functional/binder2nd.h:
@@ -18394,6 +18935,8 @@ src/ui/panels/layerpanel.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/errno.h:
 
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qreadwritelock.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/for_each.h:
 
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtWidgets.framework/Versions/A/Headers/QDialog:
@@ -18434,6 +18977,8 @@ src/ui/panels/layerpanel.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/desugars_to.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/seed_seq.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX26.0.sdk/usr/include/machine/_endian.h:
 
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtCore.framework/Versions/A/Headers/qversiontagging.h:
@@ -18464,11 +19009,15 @@ src/ui/panels/layerpanel.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX26.0.sdk/usr/include/arm/_endian.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__memory_resource/monotonic_buffer_resource.h:
+
 /opt/homebrew/opt/qt/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__functional/default_searcher.h:
 
 src/core/layermanager.cpp:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcommandlineparser.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX26.0.sdk/usr/include/sys/_types/_errno_t.h:
 
@@ -18525,6 +19074,8 @@ src/core/layermanager.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_errno_t.h:
 
 /opt/homebrew/opt/qt/lib/cmake/Qt6Gui/Qt6QICNSPluginTargets-release.cmake:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__stop_token/intrusive_shared_ptr.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/unordered_map:
 
@@ -18626,6 +19177,8 @@ src/core/layermanager.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdlib.h:
 
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qstandardpaths.h:
+
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtCore.framework/Versions/A/Headers/q20type_traits.h:
 
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtWidgets.framework/Versions/A/Headers/qslider.h:
@@ -18684,6 +19237,8 @@ src/core/layermanager.h:
 
 /opt/homebrew/opt/qt/lib/cmake/Qt6Widgets/Qt6WidgetsVersionlessAliasTargets.cmake:
 
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qresource.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__utility/swap.h:
 
 /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtmocconstants.h:
@@ -18717,6 +19272,8 @@ src/core/layermanager.h:
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__configuration/availability.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__utility/integer_sequence.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/discard_block_engine.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX26.0.sdk/usr/include/_types/_locale_t.h:
 
@@ -18788,6 +19345,8 @@ src/core/layermanager.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_trivially_destructible.h:
 
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qpermissions.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/max.h:
 
 /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qsizepolicy.h:
@@ -18809,6 +19368,8 @@ Aria_autogen/YPKJ5OE7LN/moc_mainwindow.cpp:
 /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtdeprecationdefinitions.h:
 
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtCore.framework/Versions/A/Headers/qbasicatomic.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qmessageauthenticationcode.h:
 
 /opt/homebrew/opt/qt/lib/cmake/Qt6Core/Qt6QDarwinCameraPermissionPluginDependencies.cmake:
 
@@ -18980,6 +19541,8 @@ resources/resources.qrc:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/has_virtual_destructor.h:
 
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcache.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/dependent_type.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/enable_if.h:
@@ -19010,6 +19573,8 @@ resources/resources.qrc:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__tuple/tuple_element.h:
 
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qidentityproxymodel.h:
+
 /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qwidget.h:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdarg.h:
@@ -19036,6 +19601,8 @@ resources/resources.qrc:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__string/char_traits.h:
 
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qsocketnotifier.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_wchar.h:
 
 /opt/homebrew/opt/qt/lib/cmake/Qt6Gui/Qt6QJp2PluginAdditionalTargetInfo.cmake:
@@ -19061,6 +19628,8 @@ resources/resources.qrc:
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/minmax_element.h:
 
 /opt/homebrew/opt/qt/lib/cmake/Qt6Gui/Qt6QSvgIconPluginTargets.cmake:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/clamp_to_integral.h:
 
 /opt/homebrew/lib/cmake/Qt6/QtPublicPluginHelpers.cmake:
 
@@ -19096,9 +19665,15 @@ resources/resources.qrc:
 
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtCore.framework/Versions/A/Headers/qregularexpression.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__iterator/empty.h:
+
+/opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtCore.framework/Versions/A/Headers/qfunctionpointer.h:
+
 src/core/canvas_methods.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__numeric/gcd_lcm.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__stop_token/stop_state.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h:
 
@@ -19286,6 +19861,8 @@ Aria_autogen/PRMOGMWJPH/moc_layermanager.cpp:
 
 /opt/homebrew/opt/qt/lib/cmake/Qt6/Qt6ConfigVersion.cmake:
 
+/Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_neon.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__iterator/istreambuf_iterator.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_endian.h:
@@ -19311,6 +19888,8 @@ Aria_autogen/PRMOGMWJPH/moc_layermanager.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/find_first_of.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__iterator/concepts.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__stop_token/intrusive_list_view.h:
 
 /opt/homebrew/opt/qt/lib/cmake/Qt6Gui/Qt6QJpegPluginTargets-release.cmake:
 
@@ -19346,6 +19925,8 @@ Aria_autogen/PRMOGMWJPH/moc_layermanager.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__functional/mem_fun_ref.h:
 
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QStack:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__chrono/system_clock.h:
 
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtWidgets.framework/Versions/A/Headers/qabstractslider.h:
@@ -19357,6 +19938,10 @@ Aria_autogen/PRMOGMWJPH/moc_layermanager.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__format/unicode.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__ranges/subrange.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__fwd/string_view.h:
 
 /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtdeprecationmarkers.h:
 
@@ -19390,6 +19975,8 @@ src/ui/mainwindow_fileops.cpp:
 
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtCore.framework/Versions/A/Headers/qexceptionhandling.h:
 
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qstaticlatin1stringmatcher.h:
+
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtCore.framework/Versions/A/Headers/qcompare_impl.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/integral_constant.h:
@@ -19403,6 +19990,8 @@ src/ui/mainwindow_fileops.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/mutex:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/cstddef:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qfuture.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__functional/reference_wrapper.h:
 
@@ -19454,6 +20043,8 @@ src/ui/mainwindow_fileops.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__concepts/swappable.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/cauchy_distribution.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__iterator/iterator_traits.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__functional/bind.h:
@@ -19472,6 +20063,8 @@ src/ui/mainwindow_fileops.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/set:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__stop_token/atomic_unique_lock.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/iterator:
 
 CMakeLists.txt:
@@ -19479,6 +20072,12 @@ CMakeLists.txt:
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtCore.framework/Versions/A/Headers/qcontainerinfo.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__ios/fpos.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qlibraryinfo.h:
+
+/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__format/formatter_output.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__format/formatter_bool.h:
 
@@ -19560,6 +20159,8 @@ CMakeFiles/4.2.0/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q20utility.h:
 
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qlibrary.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX26.0.sdk/usr/include/sys/_types/_size_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_seek_set.h:
@@ -19622,6 +20223,8 @@ CMakeFiles/4.2.0/CMakeCXXCompiler.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__chrono/high_resolution_clock.h:
 
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtsan_impl.h:
+
 /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qdatetime.h:
 
 /opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake:
@@ -19642,6 +20245,8 @@ CMakeFiles/4.2.0/CMakeCXXCompiler.cmake:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__ranges/empty.h:
 
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qwineventnotifier.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__chrono/duration.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX26.0.sdk/usr/include/sys/_types/_ino64_t.h:
@@ -19660,7 +20265,13 @@ CMakeFiles/4.2.0/CMakeCXXCompiler.cmake:
 
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtGui.framework/Versions/A/Headers/qimage.h:
 
+/opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qcolordialog.h:
+
+/opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtCore.framework/Versions/A/Headers/qcontainerfwd.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__bit/popcount.h:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qmimetype.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__concepts/equality_comparable.h:
 
@@ -19725,6 +20336,8 @@ Aria_autogen/CKOEOPEOYL/moc_brushpanel.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__fwd/vector.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX26.0.sdk/usr/include/sys/_types/_u_int8_t.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/sstream:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/ios:
 
@@ -19805,6 +20418,8 @@ src/utils/shortcuts/shortcutmanager.h:
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_constructible.h:
 
 /opt/homebrew/opt/qt/lib/cmake/Qt6Core/Qt6QDarwinCameraPermissionPluginTargets-release.cmake:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qmetaobject.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_trivially_relocatable.h:
 
@@ -19968,7 +20583,11 @@ src/utils/shortcuts/shortcutmanager.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__fwd/string.h:
 
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcommandlineoption.h:
+
 /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcontiguouscache.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__thread/this_thread.h:
 
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtGui.framework/Versions/A/Headers/qpixelformat.h:
 
@@ -19991,6 +20610,8 @@ src/utils/shortcuts/shortcutmanager.cpp:
 /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qatomic.h:
 
 /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QUuid:
+
+/opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtextboundaryfinder.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__bit/countr.h:
 

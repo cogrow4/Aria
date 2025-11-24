@@ -749,6 +749,7 @@ Aria_autogen/timestamp: \
 	/Users/coeng24/Projects/Aria/src/ui/mainwindow.cpp \
 	/Users/coeng24/Projects/Aria/src/ui/mainwindow.h \
 	/Users/coeng24/Projects/Aria/src/ui/mainwindow_fileops.cpp \
+	/Users/coeng24/Projects/Aria/src/ui/mainwindow_select.cpp \
 	/Users/coeng24/Projects/Aria/src/ui/panels/brushpanel.cpp \
 	/Users/coeng24/Projects/Aria/src/ui/panels/brushpanel.h \
 	/Users/coeng24/Projects/Aria/src/ui/panels/layerpanel.cpp \

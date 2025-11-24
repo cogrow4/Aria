@@ -212,10 +212,24 @@ CMakeFiles/Aria.dir/src/ui/mainwindow_fileops.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Aria.dir/src/ui/mainwindow_fileops.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/coeng24/Projects/Aria/src/ui/mainwindow_fileops.cpp -o CMakeFiles/Aria.dir/src/ui/mainwindow_fileops.cpp.s
 
+CMakeFiles/Aria.dir/src/ui/mainwindow_select.cpp.o: CMakeFiles/Aria.dir/flags.make
+CMakeFiles/Aria.dir/src/ui/mainwindow_select.cpp.o: src/ui/mainwindow_select.cpp
+CMakeFiles/Aria.dir/src/ui/mainwindow_select.cpp.o: CMakeFiles/Aria.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/coeng24/Projects/Aria/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Aria.dir/src/ui/mainwindow_select.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Aria.dir/src/ui/mainwindow_select.cpp.o -MF CMakeFiles/Aria.dir/src/ui/mainwindow_select.cpp.o.d -o CMakeFiles/Aria.dir/src/ui/mainwindow_select.cpp.o -c /Users/coeng24/Projects/Aria/src/ui/mainwindow_select.cpp
+
+CMakeFiles/Aria.dir/src/ui/mainwindow_select.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Aria.dir/src/ui/mainwindow_select.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/coeng24/Projects/Aria/src/ui/mainwindow_select.cpp > CMakeFiles/Aria.dir/src/ui/mainwindow_select.cpp.i
+
+CMakeFiles/Aria.dir/src/ui/mainwindow_select.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Aria.dir/src/ui/mainwindow_select.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/coeng24/Projects/Aria/src/ui/mainwindow_select.cpp -o CMakeFiles/Aria.dir/src/ui/mainwindow_select.cpp.s
+
 CMakeFiles/Aria.dir/src/ui/panels/brushpanel.cpp.o: CMakeFiles/Aria.dir/flags.make
 CMakeFiles/Aria.dir/src/ui/panels/brushpanel.cpp.o: src/ui/panels/brushpanel.cpp
 CMakeFiles/Aria.dir/src/ui/panels/brushpanel.cpp.o: CMakeFiles/Aria.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/coeng24/Projects/Aria/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Aria.dir/src/ui/panels/brushpanel.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/coeng24/Projects/Aria/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Aria.dir/src/ui/panels/brushpanel.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Aria.dir/src/ui/panels/brushpanel.cpp.o -MF CMakeFiles/Aria.dir/src/ui/panels/brushpanel.cpp.o.d -o CMakeFiles/Aria.dir/src/ui/panels/brushpanel.cpp.o -c /Users/coeng24/Projects/Aria/src/ui/panels/brushpanel.cpp
 
 CMakeFiles/Aria.dir/src/ui/panels/brushpanel.cpp.i: cmake_force
@@ -229,7 +243,7 @@ CMakeFiles/Aria.dir/src/ui/panels/brushpanel.cpp.s: cmake_force
 CMakeFiles/Aria.dir/src/ui/panels/layerpanel.cpp.o: CMakeFiles/Aria.dir/flags.make
 CMakeFiles/Aria.dir/src/ui/panels/layerpanel.cpp.o: src/ui/panels/layerpanel.cpp
 CMakeFiles/Aria.dir/src/ui/panels/layerpanel.cpp.o: CMakeFiles/Aria.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/coeng24/Projects/Aria/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Aria.dir/src/ui/panels/layerpanel.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/coeng24/Projects/Aria/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Aria.dir/src/ui/panels/layerpanel.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Aria.dir/src/ui/panels/layerpanel.cpp.o -MF CMakeFiles/Aria.dir/src/ui/panels/layerpanel.cpp.o.d -o CMakeFiles/Aria.dir/src/ui/panels/layerpanel.cpp.o -c /Users/coeng24/Projects/Aria/src/ui/panels/layerpanel.cpp
 
 CMakeFiles/Aria.dir/src/ui/panels/layerpanel.cpp.i: cmake_force
@@ -243,7 +257,7 @@ CMakeFiles/Aria.dir/src/ui/panels/layerpanel.cpp.s: cmake_force
 CMakeFiles/Aria.dir/src/ui/dialogs/welcomedialog.cpp.o: CMakeFiles/Aria.dir/flags.make
 CMakeFiles/Aria.dir/src/ui/dialogs/welcomedialog.cpp.o: src/ui/dialogs/welcomedialog.cpp
 CMakeFiles/Aria.dir/src/ui/dialogs/welcomedialog.cpp.o: CMakeFiles/Aria.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/coeng24/Projects/Aria/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Aria.dir/src/ui/dialogs/welcomedialog.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/coeng24/Projects/Aria/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Aria.dir/src/ui/dialogs/welcomedialog.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Aria.dir/src/ui/dialogs/welcomedialog.cpp.o -MF CMakeFiles/Aria.dir/src/ui/dialogs/welcomedialog.cpp.o.d -o CMakeFiles/Aria.dir/src/ui/dialogs/welcomedialog.cpp.o -c /Users/coeng24/Projects/Aria/src/ui/dialogs/welcomedialog.cpp
 
 CMakeFiles/Aria.dir/src/ui/dialogs/welcomedialog.cpp.i: cmake_force
@@ -257,7 +271,7 @@ CMakeFiles/Aria.dir/src/ui/dialogs/welcomedialog.cpp.s: cmake_force
 CMakeFiles/Aria.dir/src/widgets/hsvcolorpicker.cpp.o: CMakeFiles/Aria.dir/flags.make
 CMakeFiles/Aria.dir/src/widgets/hsvcolorpicker.cpp.o: src/widgets/hsvcolorpicker.cpp
 CMakeFiles/Aria.dir/src/widgets/hsvcolorpicker.cpp.o: CMakeFiles/Aria.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/coeng24/Projects/Aria/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Aria.dir/src/widgets/hsvcolorpicker.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/coeng24/Projects/Aria/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Aria.dir/src/widgets/hsvcolorpicker.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Aria.dir/src/widgets/hsvcolorpicker.cpp.o -MF CMakeFiles/Aria.dir/src/widgets/hsvcolorpicker.cpp.o.d -o CMakeFiles/Aria.dir/src/widgets/hsvcolorpicker.cpp.o -c /Users/coeng24/Projects/Aria/src/widgets/hsvcolorpicker.cpp
 
 CMakeFiles/Aria.dir/src/widgets/hsvcolorpicker.cpp.i: cmake_force
@@ -271,7 +285,7 @@ CMakeFiles/Aria.dir/src/widgets/hsvcolorpicker.cpp.s: cmake_force
 CMakeFiles/Aria.dir/src/widgets/ariacolorpicker.cpp.o: CMakeFiles/Aria.dir/flags.make
 CMakeFiles/Aria.dir/src/widgets/ariacolorpicker.cpp.o: src/widgets/ariacolorpicker.cpp
 CMakeFiles/Aria.dir/src/widgets/ariacolorpicker.cpp.o: CMakeFiles/Aria.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/coeng24/Projects/Aria/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Aria.dir/src/widgets/ariacolorpicker.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/coeng24/Projects/Aria/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/Aria.dir/src/widgets/ariacolorpicker.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Aria.dir/src/widgets/ariacolorpicker.cpp.o -MF CMakeFiles/Aria.dir/src/widgets/ariacolorpicker.cpp.o.d -o CMakeFiles/Aria.dir/src/widgets/ariacolorpicker.cpp.o -c /Users/coeng24/Projects/Aria/src/widgets/ariacolorpicker.cpp
 
 CMakeFiles/Aria.dir/src/widgets/ariacolorpicker.cpp.i: cmake_force
@@ -285,7 +299,7 @@ CMakeFiles/Aria.dir/src/widgets/ariacolorpicker.cpp.s: cmake_force
 CMakeFiles/Aria.dir/src/utils/shortcuts/shortcutmanager.cpp.o: CMakeFiles/Aria.dir/flags.make
 CMakeFiles/Aria.dir/src/utils/shortcuts/shortcutmanager.cpp.o: src/utils/shortcuts/shortcutmanager.cpp
 CMakeFiles/Aria.dir/src/utils/shortcuts/shortcutmanager.cpp.o: CMakeFiles/Aria.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/coeng24/Projects/Aria/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/Aria.dir/src/utils/shortcuts/shortcutmanager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/coeng24/Projects/Aria/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/Aria.dir/src/utils/shortcuts/shortcutmanager.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Aria.dir/src/utils/shortcuts/shortcutmanager.cpp.o -MF CMakeFiles/Aria.dir/src/utils/shortcuts/shortcutmanager.cpp.o.d -o CMakeFiles/Aria.dir/src/utils/shortcuts/shortcutmanager.cpp.o -c /Users/coeng24/Projects/Aria/src/utils/shortcuts/shortcutmanager.cpp
 
 CMakeFiles/Aria.dir/src/utils/shortcuts/shortcutmanager.cpp.i: cmake_force
@@ -299,7 +313,7 @@ CMakeFiles/Aria.dir/src/utils/shortcuts/shortcutmanager.cpp.s: cmake_force
 CMakeFiles/Aria.dir/qrc_resources.cpp.o: CMakeFiles/Aria.dir/flags.make
 CMakeFiles/Aria.dir/qrc_resources.cpp.o: qrc_resources.cpp
 CMakeFiles/Aria.dir/qrc_resources.cpp.o: CMakeFiles/Aria.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/coeng24/Projects/Aria/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/Aria.dir/qrc_resources.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/coeng24/Projects/Aria/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/Aria.dir/qrc_resources.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Aria.dir/qrc_resources.cpp.o -MF CMakeFiles/Aria.dir/qrc_resources.cpp.o.d -o CMakeFiles/Aria.dir/qrc_resources.cpp.o -c /Users/coeng24/Projects/Aria/qrc_resources.cpp
 
 CMakeFiles/Aria.dir/qrc_resources.cpp.i: cmake_force
@@ -321,6 +335,7 @@ Aria_OBJECTS = \
 "CMakeFiles/Aria.dir/src/core/layermanager.cpp.o" \
 "CMakeFiles/Aria.dir/src/ui/mainwindow.cpp.o" \
 "CMakeFiles/Aria.dir/src/ui/mainwindow_fileops.cpp.o" \
+"CMakeFiles/Aria.dir/src/ui/mainwindow_select.cpp.o" \
 "CMakeFiles/Aria.dir/src/ui/panels/brushpanel.cpp.o" \
 "CMakeFiles/Aria.dir/src/ui/panels/layerpanel.cpp.o" \
 "CMakeFiles/Aria.dir/src/ui/dialogs/welcomedialog.cpp.o" \
@@ -341,6 +356,7 @@ Aria: CMakeFiles/Aria.dir/src/core/layer.cpp.o
 Aria: CMakeFiles/Aria.dir/src/core/layermanager.cpp.o
 Aria: CMakeFiles/Aria.dir/src/ui/mainwindow.cpp.o
 Aria: CMakeFiles/Aria.dir/src/ui/mainwindow_fileops.cpp.o
+Aria: CMakeFiles/Aria.dir/src/ui/mainwindow_select.cpp.o
 Aria: CMakeFiles/Aria.dir/src/ui/panels/brushpanel.cpp.o
 Aria: CMakeFiles/Aria.dir/src/ui/panels/layerpanel.cpp.o
 Aria: CMakeFiles/Aria.dir/src/ui/dialogs/welcomedialog.cpp.o
@@ -353,7 +369,7 @@ Aria: /opt/homebrew/opt/qt/lib/QtWidgets.framework/Versions/A/QtWidgets
 Aria: /opt/homebrew/opt/qt/lib/QtGui.framework/Versions/A/QtGui
 Aria: /opt/homebrew/opt/qt/lib/QtCore.framework/Versions/A/QtCore
 Aria: CMakeFiles/Aria.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/coeng24/Projects/Aria/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable Aria"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/coeng24/Projects/Aria/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX executable Aria"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Aria.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

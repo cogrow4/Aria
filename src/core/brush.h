@@ -2,15 +2,12 @@
 #define BRUSH_H
 
 #include <QColor>
-#include <QObject>
 #include <QPainter>
 #include <QPointF>
 
-class Brush : public QObject {
-  Q_OBJECT
-
+class Brush {
 public:
-  Brush(QObject *parent = nullptr);
+  Brush();
 
   void setSize(int size);
   int size() const { return m_size; }
@@ -32,13 +29,6 @@ public:
 
   void paint(QPainter &painter, const QPointF &start, const QPointF &end,
              double pressure);
-
-signals:
-  void sizeChanged(int size);
-  void colorChanged(QColor color);
-  void opacityChanged(int opacity);
-  void hardnessChanged(int hardness);
-  void toleranceChanged(int tolerance);
 
 private:
   int m_size;

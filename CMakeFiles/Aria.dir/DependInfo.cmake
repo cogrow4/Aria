@@ -20,6 +20,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/coeng24/Projects/Aria/src/ui/dialogs/welcomedialog.cpp" "CMakeFiles/Aria.dir/src/ui/dialogs/welcomedialog.cpp.o" "gcc" "CMakeFiles/Aria.dir/src/ui/dialogs/welcomedialog.cpp.o.d"
   "/Users/coeng24/Projects/Aria/src/ui/mainwindow.cpp" "CMakeFiles/Aria.dir/src/ui/mainwindow.cpp.o" "gcc" "CMakeFiles/Aria.dir/src/ui/mainwindow.cpp.o.d"
   "/Users/coeng24/Projects/Aria/src/ui/mainwindow_fileops.cpp" "CMakeFiles/Aria.dir/src/ui/mainwindow_fileops.cpp.o" "gcc" "CMakeFiles/Aria.dir/src/ui/mainwindow_fileops.cpp.o.d"
+  "/Users/coeng24/Projects/Aria/src/ui/mainwindow_select.cpp" "CMakeFiles/Aria.dir/src/ui/mainwindow_select.cpp.o" "gcc" "CMakeFiles/Aria.dir/src/ui/mainwindow_select.cpp.o.d"
   "/Users/coeng24/Projects/Aria/src/ui/panels/brushpanel.cpp" "CMakeFiles/Aria.dir/src/ui/panels/brushpanel.cpp.o" "gcc" "CMakeFiles/Aria.dir/src/ui/panels/brushpanel.cpp.o.d"
   "/Users/coeng24/Projects/Aria/src/ui/panels/layerpanel.cpp" "CMakeFiles/Aria.dir/src/ui/panels/layerpanel.cpp.o" "gcc" "CMakeFiles/Aria.dir/src/ui/panels/layerpanel.cpp.o.d"
   "/Users/coeng24/Projects/Aria/src/utils/shortcuts/shortcutmanager.cpp" "CMakeFiles/Aria.dir/src/utils/shortcuts/shortcutmanager.cpp.o" "gcc" "CMakeFiles/Aria.dir/src/utils/shortcuts/shortcutmanager.cpp.o.d"

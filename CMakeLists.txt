@@ -29,6 +29,7 @@ set(PROJECT_SOURCES
     src/ui/mainwindow.cpp
     src/ui/mainwindow.h
     src/ui/mainwindow_fileops.cpp
+    src/ui/mainwindow_select.cpp
     
     # UI Panels
     src/ui/panels/brushpanel.cpp

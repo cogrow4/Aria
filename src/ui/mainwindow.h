@@ -26,6 +26,11 @@ private slots:
   void onSave();
   void onSaveAs();
 
+  // Select menu slots
+  void selectAll();
+  void deselect();
+  void invertSelection();
+
 private:
   Canvas *m_canvas;
   QMenu *m_viewMenu;               // For adding dock panel toggle actions

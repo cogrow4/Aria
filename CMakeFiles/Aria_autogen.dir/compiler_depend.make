@@ -751,6 +751,7 @@ Aria_autogen/timestamp: /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/
   src/ui/mainwindow.cpp \
   src/ui/mainwindow.h \
   src/ui/mainwindow_fileops.cpp \
+  src/ui/mainwindow_select.cpp \
   src/ui/panels/brushpanel.cpp \
   src/ui/panels/brushpanel.h \
   src/ui/panels/layerpanel.cpp \
@@ -1752,8 +1753,6 @@ Aria_autogen/timestamp: /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/
 
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtCore.framework/Versions/A/Headers/qiterator.h:
 
-/opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtCore.framework/Versions/A/Headers/qiterable.h:
-
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtCore.framework/Versions/A/Headers/qitemselectionmodel.h:
 
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtCore.framework/Versions/A/Headers/qiodevicebase.h:
@@ -1787,14 +1786,6 @@ Aria_autogen/timestamp: /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtCore.framework/Versions/A/Headers/qttranslation.h:
 
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtCore.framework/Versions/A/Headers/qcontainertools_impl.h:
-
-/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:
-
-/opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtWidgets.framework/Versions/A/Headers/qtwidgetsexports.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__iterator/empty.h:
-
-/opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtCore.framework/Versions/A/Headers/qcontainerfwd.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_specialization.h:
 
@@ -1849,6 +1840,10 @@ src/widgets/ariacolorpicker.h:
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__math/fma.h:
 
 src/widgets/ariacolorpicker.cpp:
+
+/opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtCore.framework/Versions/A/Headers/qiterable.h:
+
+src/ui/mainwindow_select.cpp:
 
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtCore.framework/Versions/A/Headers/qstringfwd.h:
 
@@ -3317,6 +3312,14 @@ src/ui/panels/layerpanel.h:
 /opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtCore.framework/Versions/A/Headers/q20functional.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/iosfwd:
+
+/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:
+
+/opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtWidgets.framework/Versions/A/Headers/qtwidgetsexports.h:
+
+/opt/homebrew/Cellar/qtbase/6.9.3_1/lib/QtCore.framework/Versions/A/Headers/qcontainerfwd.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__iterator/empty.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__bit/popcount.h:
 

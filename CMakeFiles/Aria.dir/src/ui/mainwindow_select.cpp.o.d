@@ -1,9 +1,9 @@
-CMakeFiles/Aria.dir/src/ui/mainwindow.cpp.o: \
-  /Users/coeng24/Projects/Aria/src/ui/mainwindow.cpp \
-  /Users/coeng24/Projects/Aria/src/ui/mainwindow.h \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/QMainWindow \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qmainwindow.h \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qtwidgetsglobal.h \
+CMakeFiles/Aria.dir/src/ui/mainwindow_select.cpp.o: \
+  /Users/coeng24/Projects/Aria/src/ui/mainwindow_select.cpp \
+  /Users/coeng24/Projects/Aria/src/core/canvas.h \
+  /Users/coeng24/Projects/Aria/src/core/brush.h \
+  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/QColor \
+  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qcolor.h \
   /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qtguiglobal.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qglobal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/type_traits \
@@ -685,11 +685,7 @@ CMakeFiles/Aria.dir/src/ui/mainwindow.cpp.o: \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qversiontagging.h \
   /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qtgui-config.h \
   /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qtguiexports.h \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qtwidgets-config.h \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qtwidgetsexports.h \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qwidget.h \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qwindowdefs.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qobjectdefs.h \
+  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qrgb.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qnamespace.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcompare.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qstdlibdetection.h \
@@ -850,23 +846,23 @@ CMakeFiles/Aria.dir/src/ui/mainwindow.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__functional/not_fn.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__functional/perfect_forward.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtmetamacros.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qobjectdefs_impl.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qfunctionaltools_impl.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qobject.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qstring.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qchar.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qstringview.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qbytearray.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qrefcount.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qarraydata.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qpair.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qstringlist.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qlist.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qarraydatapointer.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qarraydataops.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qarraydata.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qpair.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcontainertools_impl.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qxptype_traits.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q20functional.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q20memory.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q17memory.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qhashfunctions.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qstring.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qchar.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qstringview.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qbytearray.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qrefcount.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qbytearrayalgorithms.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qbytearrayview.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qstringfwd.h \
@@ -879,8 +875,6 @@ CMakeFiles/Aria.dir/src/ui/mainwindow.cpp.o: \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qstringbuilder.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qstringconverter.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qstringconverter_base.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qlist.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qhashfunctions.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/numeric \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__numeric/accumulate.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__numeric/adjacent_difference.h \
@@ -899,13 +893,38 @@ CMakeFiles/Aria.dir/src/ui/mainwindow.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_execution_policy.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qiterator.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qbytearraylist.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qstringlist.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qalgorithms.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qstringmatcher.h \
+  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qrgba64.h \
+  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/QPainter \
+  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qpainter.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qrect.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qmargins.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q23utility.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q20utility.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qsize.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qpoint.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qscopedpointer.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qmetatype.h \
+  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qpixmap.h \
+  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qpaintdevice.h \
+  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qwindowdefs.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qobjectdefs.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qobjectdefs_impl.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qfunctionaltools_impl.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qshareddata.h \
+  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qimage.h \
+  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qpixelformat.h \
+  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qtransform.h \
+  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qpolygon.h \
+  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qregion.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qdatastream.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qiodevicebase.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qspan.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/cassert \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q20iterator.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qline.h \
+  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qtextoption.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qmetatype.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qfloat16.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qmath.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtformat_impl.h \
@@ -917,35 +936,36 @@ CMakeFiles/Aria.dir/src/ui/mainwindow.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/list \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/map \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__tree \
+  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qpen.h \
+  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qbrush.h \
+  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qfontinfo.h \
+  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qfont.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qendian.h \
+  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qfontvariableaxis.h \
+  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qfontmetrics.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QPointF \
+  /Users/coeng24/Projects/Aria/src/core/layermanager.h \
+  /Users/coeng24/Projects/Aria/src/core/layer.h \
+  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/QImage \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QObject \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qobject.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qobject_impl.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qbindingstorage.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/chrono \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__chrono/file_clock.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/forward_list \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qmargins.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q23utility.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q20utility.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QString \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QUuid \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/quuid.h \
+  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QRect \
+  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/QWidget \
+  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qwidget.h \
+  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qtwidgetsglobal.h \
+  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qtwidgets-config.h \
+  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qtwidgetsexports.h \
   /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qaction.h \
   /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qkeysequence.h \
   /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qicon.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qsize.h \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qpixmap.h \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qpaintdevice.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qrect.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qpoint.h \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qcolor.h \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qrgb.h \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qrgba64.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qshareddata.h \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qimage.h \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qpixelformat.h \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qtransform.h \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qpolygon.h \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qregion.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qspan.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/cassert \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q20iterator.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qline.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qvariant.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qdebug.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtextstream.h \
@@ -960,153 +980,10 @@ CMakeFiles/Aria.dir/src/ui/mainwindow.cpp.o: \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qhash.h \
   /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qvarlengtharray.h \
   /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qpalette.h \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qbrush.h \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qfont.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qendian.h \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qfontmetrics.h \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qfontinfo.h \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qfontvariableaxis.h \
   /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qsizepolicy.h \
   /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qcursor.h \
   /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qbitmap.h \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qtabwidget.h \
-  /Users/coeng24/Projects/Aria/src/core/canvas.h \
-  /Users/coeng24/Projects/Aria/src/core/brush.h \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/QColor \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/QPainter \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qpainter.h \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qtextoption.h \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qpen.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QPointF \
-  /Users/coeng24/Projects/Aria/src/core/layermanager.h \
-  /Users/coeng24/Projects/Aria/src/core/layer.h \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/QImage \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QObject \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QString \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QUuid \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/quuid.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QRect \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/QWidget \
-  /Users/coeng24/Projects/Aria/src/ui/panels/brushpanel.h \
-  /Users/coeng24/Projects/Aria/src/ui/panels/layerpanel.h \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/QListView \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qlistview.h \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qabstractitemview.h \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qabstractscrollarea.h \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qframe.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qabstractitemmodel.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qitemselectionmodel.h \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qabstractitemdelegate.h \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qstyleoption.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qlocale.h \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qabstractspinbox.h \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qvalidator.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qregularexpression.h \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qslider.h \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qabstractslider.h \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qstyle.h \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qtabbar.h \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qrubberband.h \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/QStandardItemModel \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qstandarditemmodel.h \
-  /Users/coeng24/Projects/Aria/src/utils/shortcuts/shortcutmanager.h \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/QAction \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QHash \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/QKeySequence \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/QSettings \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qsettings.h \
-  /Users/coeng24/Projects/Aria/src/widgets/hsvcolorpicker.h \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/QActionGroup \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qactiongroup.h \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/QDockWidget \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qdockwidget.h \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/QFileDialog \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qfiledialog.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qdir.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qdirlisting.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qfiledevice.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qiodevice.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qdatetime.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcalendar.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qfile.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/filesystem \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__filesystem/copy_options.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__filesystem/directory_entry.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__filesystem/file_status.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__filesystem/file_type.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__filesystem/perms.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__filesystem/file_time_type.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__filesystem/filesystem_error.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__filesystem/path.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/iomanip \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/istream \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__ostream/basic_ostream.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/bitset \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_char_like_type.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/ostream \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/format \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/queue \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__fwd/deque.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__fwd/queue.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/deque \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/stack \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__fwd/stack.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/print \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/unistd.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__filesystem/operations.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__filesystem/perm_options.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__filesystem/space_info.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__filesystem/directory_iterator.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__filesystem/directory_options.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__filesystem/path_iterator.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__filesystem/recursive_directory_iterator.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__filesystem/u8path.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qfileinfo.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qtimezone.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qurl.h \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qdialog.h \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/QImageWriter \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qimagewriter.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcoreapplication.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcoreevent.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qbasictimer.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qabstracteventdispatcher.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qeventloop.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qdeadlinetimer.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qelapsedtimer.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qnativeinterface.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcoreapplication_platform.h \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qimageiohandler.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qplugin.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qpointer.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qjsonobject.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qjsonvalue.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcborvalue.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qcborcommon.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qjsondocument.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qjsonparseerror.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/q20algorithm.h \
-  /opt/homebrew/opt/qt/lib/QtCore.framework/Headers/qfactoryinterface.h \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/QInputDialog \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qinputdialog.h \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qlineedit.h \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qtextcursor.h \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qtextdocument.h \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qtextformat.h \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/QLabel \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qlabel.h \
-  /opt/homebrew/opt/qt/lib/QtGui.framework/Headers/qpicture.h \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/QMenu \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qmenu.h \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/QMenuBar \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qmenubar.h \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/QMessageBox \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qmessagebox.h \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qdialogbuttonbox.h \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/QToolBar \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qtoolbar.h \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/QVBoxLayout \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qboxlayout.h \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qlayout.h \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qlayoutitem.h \
-  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qgridlayout.h
+  /Users/coeng24/Projects/Aria/src/ui/mainwindow.h \
+  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/QMainWindow \
+  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qmainwindow.h \
+  /opt/homebrew/opt/qt/lib/QtWidgets.framework/Headers/qtabwidget.h
