@@ -1,40 +1,39 @@
 # Aria
 
-**A lightweight, modern digital painting application**
+**A lightweight, digital painting application**
 
 ![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux%20%7C%20Windows-blue)
 ![License](https://img.shields.io/badge/license-Unlicense-green)
 ![Qt](https://img.shields.io/badge/Qt-6-41cd52)
 
-Aria is a free, open-source digital painting application inspired by professional tools like Clip Studio Paint and Krita. Built with Qt 6 and C++, it provides a fast, intuitive painting experience with powerful features for artists.
+Aria is a free, open-source digital painting application inspired by professional tools like Clip Studio Paint and Krita. Built with Qt 6 and C++, it provides a fast, somwwhat intuitive painting experience with powerful (in the future) features for artists.
 
-## ✨ Features
+## Features
 
-### Current Features
-- 🎨 **Advanced Brush System** - Pressure-sensitive drawing with customizable brushes
-- 🖼️ **Layer Management** - Multiple layers with blend modes and opacity control
-- 🎯 **Selection Tools** - Rectangle, ellipse, and lasso selection
-- 🪣 **Fill Bucket** - Flood fill with tolerance control
-- 💧 **Eyedropper** - Pick colors from your canvas
-- 🎨 **HSV Color Picker** - Professional-grade color selection
-- ⌨️ **Keyboard Shortcuts** - Fully customizable shortcuts
-- 📄 **File Support** - Open and save PNG, JPEG, and native .aria format
+### Mostly Planned but Half-Implemented Features
+- **Brush System** - Drawing with customizable brushes (Custom brushes will be implemented sometime)
+- **Layer Management** - Multiple layers with blend modes and opacity control
+- **Selection Tools** - Rectangle, ellipse, and lasso selection
+- **Fill Bucket** - Flood fill with tolerance control
+- **Eyedropper** - Pick colors from your canvas
+- **HSV Color Picker** - Professional-grade color selection (This is almost finished)
+- **Keyboard Shortcuts** - Fully customizable shortcuts
+- **File Support** - Open and save PNG, JPEG, and native .aria format (File export works but .aria needs to be implemented)
 
-### Planned Features
+### More Planned Features
 - Advanced brush dynamics and presets
 - Layer groups and masks
 - Text tool with typography controls
 - Filters and adjustments (blur, sharpen, curves, levels)
-- Animation timeline
 - Symmetry painting
-- 3D reference viewer
+- Image reference viewer
 - GPU acceleration (Metal/Vulkan)
 
-## 📸 Screenshots
+## Screenshots
 
-*Screenshots coming soon*
+*Screenshots maybe coming soon*
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - **Qt 6.2 or later**
@@ -80,11 +79,11 @@ cmake -B build -DCMAKE_PREFIX_PATH="C:/Qt/6.x.x/msvc2019_64"
 cmake --build build --config Release
 ```
 
-## 🎯 Usage
+## Usage
 
 ### Basic Workflow
 1. **Create a new canvas**: File → New (or Ctrl+N)
-2. **Select a tool**: Use toolbar or keyboard shortcuts (B for brush, E for eraser)
+2. **Select a tool**: Use toolbar or keyboard shortcuts (B for brush, E for eraser) (Currently all select tools are broken)
 3. **Choose a color**: Click the color picker panel
 4. **Draw**: Click and drag on the canvas
 5. **Manage layers**: Use the Layers panel to add, delete, or organize layers
@@ -118,13 +117,13 @@ src/
 
 See [ARCHITECTURE.md](ARCHITECTURE.md) for detailed design documentation.
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Aria is released into the public domain under The Unlicense, making it easy for anyone to contribute.
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code style, development process, and how to submit pull requests.
 
-## 📋 License
+## License
 
 This software is released into the **public domain** under [The Unlicense](LICENSE).
 
@@ -134,20 +133,16 @@ You are free to use, modify, and distribute this software for any purpose, comme
 
 Aria uses Qt Framework, which is licensed under LGPL v3. See [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md) for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Built with [Qt Framework](https://www.qt.io/)
 - Inspired by Clip Studio Paint, Krita, and Fire Alpaca
-- Icon design inspired by modern design principles
 
-## 📞 Contact
 
-- **Issues**: https://github.com/yourusername/Aria/issues
-- **Discussions**: https://github.com/yourusername/Aria/discussions
 
 ## 🗺️ Roadmap
 
-See our [project board](https://github.com/yourusername/Aria/projects) for upcoming features and development status.
+See our [project board](https://github.com/cogrow4/Aria/projects) for upcoming features and development status.
 
 ---
 
