@@ -48,7 +48,7 @@ Aria is a free, open-source digital painting application inspired by professiona
 brew install qt@6 cmake
 
 # Clone and build
-git clone https://github.com/yourusername/Aria.git
+git clone https://github.com/cogrow4/Aria.git
 cd Aria
 cmake -B build -DCMAKE_PREFIX_PATH=$(brew --prefix qt@6)
 cmake --build build
@@ -61,7 +61,7 @@ cmake --build build
 sudo apt install qt6-base-dev cmake build-essential
 
 # Clone and build
-git clone https://github.com/yourusername/Aria.git
+git clone https://github.com/cogrow4/Aria.git
 cd Aria
 cmake -B build
 cmake --build build
@@ -73,7 +73,7 @@ cmake --build build
 # Install Qt via official installer or vcpkg
 # Then use CMake GUI or command line
 
-git clone https://github.com/yourusername/Aria.git
+git clone https://github.com/cogrow4/Aria.git
 cd Aria
 cmake -B build -DCMAKE_PREFIX_PATH="C:/Qt/6.x.x/msvc2019_64"
 cmake --build build --config Release
